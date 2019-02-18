@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0 auto !important;padding: 0 !important;height: 100% !important;width: 100% !important;">
+<head style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <meta charset="utf-8" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <style style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+       
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        *[x-apple-data-detectors],  /* iOS */
+        .x-gmail-data-detectors,    /* Gmail */
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+        transition: all 100ms ease-in;
+    }
+    .button-td:hover,
+    .button-a:hover {
+        background: #555555 !important;
+        border-color: #555555 !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 600px) {
+
+        /* What it does: Adjust typography on small screens to improve readability */
+        .email-container p {
+            font-size: 17px !important;
+            line-height: 22px !important;
+        }
+
+    }
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+   
+
+</head>
+<body width="100%" bgcolor="#F1F1F1" style="margin: 0 auto !important;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0 !important;height: 100% !important;width: 100% !important;">
+    <center style="width: 100%;background: #f1f1f1;text-align: left;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display: none;font-size: 1px;line-height: 1px;max-height: 0px;max-width: 0px;opacity: 0;overflow: hidden;mso-hide: all;font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+        <div style="max-width: 600px;margin: auto;padding-top: 25px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="email-container">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+
+            <!-- Email Header : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;table-layout: fixed !important;margin: 0 auto !important;" bgcolor="#e2e2e2">
+                <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <td style="padding: 10px 15px;text-align: center;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+                        <img src="https://ogi.inngenius.com/images/logo.png" width="150"  alt="Inngenius Logo" border="0" style="height: auto;font-family: sans-serif;font-size: 15px;line-height: 20px;color: #555555;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;-ms-interpolation-mode: bicubic;">                        
+                        <p style="padding: 10px 15px;font-family: sans-serif;font-size: 18px;line-height: 20px;color: #555555;background: #fff;text-transform: uppercase;font-weight: bold;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">{property}</p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Email Header : END -->
+
+            <!-- Email Body : BEGIN -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;table-layout: fixed !important;margin: 0 auto !important;">
+
+                
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;table-layout: fixed !important;margin: 0 auto !important;">
+                            <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <td style="padding: 10px 15px;font-family: sans-serif;font-size: 15px;line-height: 20px;color: #555555;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+                                    <h1 style="margin: 0 0 10px 0;font-family: sans-serif;font-size: 24px;line-height: 27px;color: #BF1E2E;font-weight: normal;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">{title}</h1>
+                                    <p style="margin: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">{date}</p>
+                                    
+                                </td>
+                            </tr>
+                            
+                            
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+                <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                   <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;table-layout: fixed !important;margin: 0 auto !important;">
+                            <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <td style="padding: 10px 15px;font-family: sans-serif;font-size: 15px;line-height: 20px;color: #555555;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">                                    
+                                    
+                                    <!--<h3 style="margin: 10px 0 10px 0;font-family: sans-serif;font-size: 16px;line-height: 27px;color: #0E76BC;font-weight: normal;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Time Cards</h3>-->
+                                    <p style="margin: 0;padding: 5px;background-color: #CCEDF8;color: #00699D;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">{content}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+               
+
+				
+               
+                <!-- Clear Spacer : END -->
+
+                <!-- 1 Column Text : BEGIN -->
+                <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <td bgcolor="#ffffff" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;table-layout: fixed !important;margin: 0 auto !important;">
+                            <tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <td style="padding: 10px 15px;font-family: sans-serif;font-size: 15px;line-height: 20px;color: #555555;text-align: center;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+                                <p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <a href="#" style="font-family: sans-serif;font-size: 13px;line-height: 1.1;text-align: center;text-decoration: none;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <span style="color: #000;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Privacy Policy</span>
+                                    </a>
+                                    &copy; Inngneius, 2018
+                                                </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+
+
+    </center>
+</body>
+</html>
