@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<QBWCXML>
+<AppName>HTTPSWebService</AppName>
+<AppID></AppID>
+<AppURL>http://localhost:50517/QBWC_WebService.asmx</AppURL>
+<AppDescription>A short description for WCWebService1</AppDescription>
+<AppSupport>http://MTVL04A200337.corp.intuit.net/WCWebService/WCWebService.asmx?wsdl</AppSupport>
+<UserName>USERNAME</UserName>
+<OwnerID>{3fef720c-3815-41ce-bd56-e979116401d2}</OwnerID>
+<FileID>{4437d7f4-c6be-4e04-9a7d-bbecf3ba1e24}</FileID>
+<QBType>QBFS</QBType>
+<Style>Document</Style>
+<AuthFlags>0xF</AuthFlags>
+</QBWCXML>
